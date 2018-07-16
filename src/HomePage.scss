@@ -1,0 +1,187 @@
+@function fact($number) {
+  $value: 1;
+  @if $number > 0 {
+    @for $i from 1 through $number {
+      $value: $value * $i;
+    }
+  }
+  @return $value;
+}
+
+@function pi() {
+  @return 3.14159265359;
+}
+
+@function sin($angle) {
+  $sin: 0;
+  // Iterate a bunch of times.
+  @for $i from 0 through 10 {
+    $sin: $sin + pow(-1, $i) * pow($angle, (2 * $i + 1)) / fact(2 * $i + 1);
+  }
+  @return $sin;
+}
+
+@function cos($angle) {
+  $cos: 0;
+  // Iterate a bunch of times.
+  @for $i from 0 through 10 {
+    $cos: $cos + pow(-1, $i) * pow($angle, 2 * $i) / fact(2 * $i);
+  }
+  @return $cos;
+}
+
+@function pow($number, $exp) {
+  $value: 1;
+  @if $exp > 0 {
+    @for $i from 1 through $exp {
+      $value: $value * $number;
+    }
+  }
+  @else if $exp < 0 {
+    @for $i from 1 through -$exp {
+      $value: $value / $number;
+    }
+  }
+  @return $value;
+}
+
+#homePageDiv{
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	overflow: hidden;
+	animation: backgroundChange 36s ease-in-out 0s infinite;
+}
+
+@keyframes backgroundChange{
+
+	@for $i from 0 through 900{
+
+		$percentage: $i * 0.11111111111111111111111111111111111111;
+
+		$angle1: 2 * pi() * $i / 900;
+		$angle2: $angle1 - pi();
+
+		$sin1: sin($angle1);
+		$sin2: sin($angle2);
+
+		$cos1: cos($angle1);
+		$cos2: cos($angle2);
+
+		$xLeftDisplacement: 25 + $cos1 * 12.5;
+		$xLeftPercent: $xLeftDisplacement * 1%;
+
+		$yLeftDisplacement: 25 + $sin1 * 12.5;
+		$yLeftPercent: $yLeftDisplacement * 1%;
+
+		$xRightDisplacement: 25 + $cos2 * 12.5;
+		$xRightPercent: $xRightDisplacement * 1% + 50%;
+
+		$yRightDisplacement: 25 + $sin2 * 12.5;
+		$yRightPercent: $yRightDisplacement * 1% + 50%;
+
+		#{$percentage * 1%} {	
+
+			@if $i < 100 {
+
+				background: radial-gradient(ellipse at $xLeftPercent $yLeftPercent, rgba(218.75,62.5 + $i * 0.625,62.5, 0.5), transparent),
+							radial-gradient(ellipse at $xRightPercent $yRightPercent, rgba(140,80 + $i * 0.4,40, 0.5), transparent);	
+
+			} @else if $i < 200 {
+
+				$j: $i - 100;
+
+				background: radial-gradient(ellipse at $xLeftPercent $yLeftPercent, rgba(218.75,125 + $j * 0.625,62.5, 0.5), transparent), 
+							radial-gradient(ellipse at $xRightPercent $yRightPercent, rgba(140 - $j * 0.4,120 + $j * 0.20,40, 0.5), transparent);	
+
+			} @else if $i < 300 {
+
+				$j: $i - 200;
+
+				background: radial-gradient(ellipse at $xLeftPercent $yLeftPercent, rgba(218.75 - $j * 0.625,187.5 + $j * 0.3125,62.5, 0.5), transparent), 
+							radial-gradient(ellipse at $xRightPercent $yRightPercent, rgba(100 - $j * 0.60,140,40, 0.5), transparent);	
+			
+			} @else if $i < 400 {
+
+				$j: $i - 300;
+
+				background: radial-gradient(ellipse at $xLeftPercent $yLeftPercent, rgba(156.25 - $j * 0.9375,218.75,62.5, 0.5), transparent),
+							radial-gradient(ellipse at $xRightPercent $yRightPercent, rgba(40,140,40 + $j, 0.5), transparent);	
+			
+			} @else if $i < 500 {
+
+				$j: $i - 400;
+
+				background: radial-gradient(ellipse at $xLeftPercent $yLeftPercent, rgba(62.5,218.75,62.5 + $j * 1.5625, 0.5), transparent),
+							radial-gradient(ellipse at $xRightPercent $yRightPercent, rgba(40,140 - $j * 0.8,140, 0.5), transparent);	
+			
+			} @else if $i < 600 {
+
+				$j: $i - 500;
+
+				background: radial-gradient(ellipse at $xLeftPercent $yLeftPercent, rgba(62.5,218.75 - $j * 1.25,218.75, 0.5), transparent), 
+							radial-gradient(ellipse at $xRightPercent $yRightPercent, rgba(40 + $j * 0.60,60 - $j * 0.2,140, 0.5), transparent);	
+			
+			} @else if $i < 700 {
+
+				$j: $i - 600;
+
+				background: radial-gradient(ellipse at $xLeftPercent $yLeftPercent, rgba(62.5 + $j * 0.9375,93.75 - $j * 0.3125,218.75, 0.5), transparent), 
+							radial-gradient(ellipse at $xRightPercent $yRightPercent, rgba(100 + $j * 0.4,40 + $j * 0.2,140, 0.5), transparent);	
+			
+			} @else if $i < 800 {
+
+				$j: $i - 700;
+
+				background: radial-gradient(ellipse at $xLeftPercent $yLeftPercent, rgba(156.25 + $j * 0.625,62.5 + $j * 0.3125,218.75, 0.5), transparent),
+							radial-gradient(ellipse at $xRightPercent $yRightPercent, rgba(140,60 - $j * 0.2,140 - $j, 0.5), transparent);	
+			
+			} @else if $i <= 900 {
+
+				$j: $i - 800;
+
+				background: radial-gradient(ellipse at $xLeftPercent $yLeftPercent, rgba(218.75,93.75 - $j * 0.3125,218.75 - $j * 1.5625, 0.5), transparent),
+							radial-gradient(ellipse at $xRightPercent $yRightPercent, rgba(140,50 + $j * 0.4,40, 0.5), transparent);	
+			
+			}
+		}
+	}	
+}
+
+#animTextBox{
+	position: relative;
+	margin: auto auto;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	user-select: none;
+	opacity: 0;
+	animation: welcome 4s cubic-bezier(0.5, 0, 0, 1) forwards 0s infinite;
+}
+
+@keyframes welcome{
+	0%{
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+#welcome{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2em;
+	display: inline-block;
+}
+
+#clickToEnter{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	display: inline-block;
+	margin-top: 1em;
+}

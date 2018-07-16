@@ -1,0 +1,226 @@
+.buttonDiv{
+	position: relative;
+	height: 61px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	cursor: pointer;
+}
+
+.buttonButton{
+	position: relative;
+	z-index: 0;
+	padding: 10px 15px;
+	height: 41px;
+	background: linear-gradient(150deg, rgb(200, 180, 250), rgb(170, 150, 220));
+	border: 2px solid rgb(185, 150, 240);
+	border-radius: 16px / 25px;
+	box-shadow: 2px 2px 15px rgba(150,150,150,0.8);
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+}
+
+.buttonSpan{
+	position: relative;
+	z-index: 1;
+	top: -30px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+	color: rgb(75, 75, 125);
+	display: inline-block;
+}
+
+[id^=projectsDiv]{
+	width: 90.8px;
+
+	&.projectsPage{
+		animation: fadeInButton 0.7s cubic-bezier(0.5, 0, 0, 1) forwards 0s 1;
+	}
+
+	&.projectsClicked{
+		animation: fadeOut 0.7s cubic-bezier(0.5, 0, 0, 1) forwards 0s 1;
+	}
+}
+
+[id^=notesDiv]{
+	width: 74.8px;
+
+	&.projectsPage{
+		animation: shiftNotesRight2 0.3s ease-out forwards 0s 1;
+	}
+
+	&.notesPage{
+		animation: fadeInButton 0.7s cubic-bezier(0.5, 0, 0, 1) forwards 0s 1;
+	}
+
+	&.aboutMePage{
+		animation: shiftNotesLeft2 0.3s ease-out forwards 0s 1;
+	}
+
+	&.projectsClicked{
+		animation: shiftNotesLeft1 0.3s ease-in forwards 0.4s 1;
+	}
+
+	&.notesClicked{
+		animation: fadeOut 0.7s cubic-bezier(0.5, 0, 0, 1) forwards 0s 1;		
+	}
+
+	&.aboutMeClicked{
+		animation: shiftNotesRight1 0.3s ease-in forwards 0.4s 1;
+	}
+
+}
+
+@keyframes shiftNotesLeft1{
+	0%{
+		transform: translateX(0px);
+	}
+	100%{
+		transform: translateX(-52.9px);
+	}
+}
+
+@keyframes shiftNotesRight1{
+	0%{
+		transform: translateX(0px);
+	}
+	100%{
+		transform: translateX(52.9px);
+	}
+}
+
+@keyframes shiftNotesLeft2{
+	0%{
+		transform: translateX(52.9px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
+}
+
+@keyframes shiftNotesRight2{
+	0%{
+		transform: translateX(-52.9px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
+}
+
+[id^=aboutMeDiv]{
+	width: 101.48px;
+
+	&.projectsPage{
+		animation: shiftAboutMeRight2 0.3s ease-out forwards 0s 1;
+	}
+
+	&.notesPage{
+		animation: shiftAboutMeLeft2 0.3s ease-out forwards 0s 1;
+	}
+
+	&.aboutMePage{
+		animation: fadeInButton 0.7s cubic-bezier(0.5, 0, 0, 1) forwards 0s 1;
+	}
+
+	&.projectsClicked{
+		animation: shiftAboutMeLeft1 0.3s ease-in forwards 0.4s 1;
+	}
+
+	&.notesClicked{
+		animation: shiftAboutMeRight1 0.3s ease-in forwards 0.4s 1;
+	}
+
+	&.aboutMeClicked{
+		animation: fadeOut 0.7s cubic-bezier(0.5, 0, 0, 1) forwards 0s 1;
+	}
+}
+
+@keyframes fadeInButton{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes shiftAboutMeLeft1{
+	0%{
+		transform: translateX(0px);
+	}
+	100%{
+		transform: translateX(-8px);
+	}
+}
+
+@keyframes shiftAboutMeRight1{
+	0%{
+		transform: translateX(0px);
+	}
+	100%{
+		transform: translateX(8px);
+	}
+}
+
+@keyframes shiftAboutMeLeft2{
+	0%{
+		transform: translateX(8px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
+}
+
+@keyframes shiftAboutMeRight2{
+	0%{
+		transform: translateX(-8px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
+}
+
+[id^=projectsBtn]{
+	width: 90.8px;
+}
+
+[id^=notesBtn]{
+	width: 74.8px;
+}
+
+[id^=aboutMeBtn]{
+	width: 101.48px;
+}
+
+.buttonDiv:hover> button {
+	animation: pulsingButton 1.5s linear infinite;
+}
+
+@keyframes pulsingButton{
+	0%, 100%{
+		transform: scale(1);
+	}
+	25%, 75%{
+		transform: scale(1.04);
+	}
+	50%{
+		transform: scale(1.08);
+	}
+}
+
+.buttonDiv:hover>span {
+	animation: purpleToBlue 1.5s linear infinite;
+}
+
+@keyframes purpleToBlue{
+	0%, 100%{
+		color: rgb(75, 75, 125);
+	}
+	25%, 75%{
+		color: rgb(37.5, 37.5, 100);
+	}
+	50%{
+		color: rgb(0, 0, 75);
+	}
+}
