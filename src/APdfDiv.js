@@ -17,7 +17,7 @@ export default class APdfDiv extends Component{
 		}
 
 		else{
-			
+
 			$(e.target).addClass('clicked');
 			$(e.target.parentElement).addClass('clicked');
 		}
