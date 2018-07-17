@@ -21,7 +21,7 @@ export default class Notes extends Component{
 		return(
 
 			<BackgroundDiv xLeftPercent = {this.props.xLeftPercent} xRightPercent = {this.props.xRightPercent} yLeftPercent = {this.props.yLeftPercent} yRightPercent = {this.props.yRightPercent}>
-
+			
 				<MenuBar button1 = {"Projects"} button2 = {"About Me"} previousPage = {this.props.previousPage} changePage = {this.props.changePage.bind(this)}/>
 
 				<BodyDiv>
