@@ -1,14 +1,14 @@
 const path = require("path");
 const webpack = require("webpack");
-const bundlePath = path.resolve(__dirname, "examples/dist");
+const bundlePath = path.resolve(__dirname, "./dist");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
-  template: path.join(__dirname, "websiteDemo/src/index.html"),
+  template: path.join(__dirname, "./src/index.html"),
   filename: "./index.html"
 });
 
 module.exports = {
-  entry: path.join(__dirname, "websiteDemo/src/index.js"),
+  entry: path.join(__dirname, "./src/index.js"),
   module: {
     rules: [
       {
@@ -46,5 +46,5 @@ module.exports = {
     port: 3000,
     publicPath: "http://localhost:3000/dist"
   },
-  plugins: [ {new webpack.HotModuleReplacementPlugin()}, {htmlWebpackPlugin} ]
+  plugins: [ new webpack.HotModuleReplacementPlugin(), htmlWebpackPlugin ]
 };
