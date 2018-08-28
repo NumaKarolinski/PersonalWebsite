@@ -28,7 +28,7 @@ export default class APdfDiv extends Component{
 		return(
 
 			<div>
-				Hello there!
+				Hello there this is legal!
 			</div>			
 
 		);

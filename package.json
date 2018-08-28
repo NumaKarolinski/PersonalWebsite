@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
+    "set-dev-server": "webpack-dev-server --mode development",
+    "start": "npm run build && npm run set-dev-server",
     "deploy": "gh-pages -d dist",
     "publish-demo": "npm run build && npm run deploy"
   },
