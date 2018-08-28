@@ -28,14 +28,11 @@ export default class APdfDiv extends Component{
 		return(
 
 			<div>
-				Changed again!
+				<a class = "aPdfDiv" href = {"https://rawgit.com/NumaKarolinski/PersonalWebsite/websiteVersion1/src/PDFs/" + this.props.fileName} download={this.props.downloadName} onClick = {(e) => this.aButtonDivClick(e)}>
+					<span id = {this.props.fileName} class = "notesTextBox">{this.props.downloadName}</span>
+				</a>
 			</div>			
 
 		);
 	}
 }
-
-
-/*<a class = "aPdfDiv" href = {"https://cdn.rawgit.com/NumaKarolinski/PersonalWebsite/websiteVersion1/src/PDFs" + this.props.fileName} download={this.props.downloadName} onClick = {(e) => this.aButtonDivClick(e)}>
-				<span id = {this.props.fileName} class = "notesTextBox">{this.props.downloadName}</span>
-			</a>*/
