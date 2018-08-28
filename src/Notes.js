@@ -30,19 +30,19 @@ export default class Notes extends Component{
 
 					<div class="allPdfDivs">
 
-							<APdfDiv fileName = "css3" downloadName = "CSS3"/>
+							<APdfDiv fileName = "css3.pdf" downloadName = "CSS3"/>
 
-							<APdfDiv fileName = "phys257" downloadName = "Experimental Methods 1"/>
+							<APdfDiv fileName = "phys257.pdf" downloadName = "Experimental Methods 1"/>
 
-							<APdfDiv fileName = "phys232" downloadName = "Heats and Waves"/>
+							<APdfDiv fileName = "phys232.pdf" downloadName = "Heats and Waves"/>
 
-							<APdfDiv fileName = "javascript" downloadName = "Javascript"/>
+							<APdfDiv fileName = "javascript.pdf" downloadName = "Javascript"/>
 
-							<APdfDiv fileName = "jquery" downloadName = "jQuery"/>
+							<APdfDiv fileName = "jquery.pdf" downloadName = "jQuery"/>
 
-							<APdfDiv fileName = "phys340" downloadName = "Majors Electricity and Magnetism"/>
+							<APdfDiv fileName = "phys340.pdf" downloadName = "Majors Electricity and Magnetism"/>
 
-							<APdfDiv fileName = "phys241" downloadName = "Signal Processing"/>
+							<APdfDiv fileName = "phys241.pdf" downloadName = "Signal Processing"/>
 
 					</div>
 				</BodyDiv>
