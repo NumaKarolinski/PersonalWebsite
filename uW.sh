@@ -1,5 +1,5 @@
 #!/bin/bash
-if cp ./dist/index.html ./dist/bundle.js ./updatedWebsite.sh ./.. ; then
+if cp ./dist/index.html ./dist/bundle.js ./uW.sh ./.. ; then
 	printf "Files are copied to Desktop!"
 else
 	printf "Either you are in the wrong directory, or /dist has been rearranged."
@@ -11,7 +11,7 @@ git push origin websiteVersion1
 git checkout gh-pages
 rm bundle.js
 rm index.html
-cp ./../index.html ./../bundle.js ./../updatedWebsite.sh .
+cp ./../index.html ./../bundle.js ./../uW.sh .
 git add -A
 git commit -m "Updating Online Website"
 git push origin gh-pages
