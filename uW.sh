@@ -20,4 +20,4 @@ printf "Your website is updated!\n"
 printf "You might want to merge the master branch (and fix merge conflicts)."
 rm ./../bundle.js
 rm ./../index.html
-rm ./../updatedWebsite.sh
+rm ./../uW.sh
