@@ -1,3 +1,4 @@
+#!/bin/bash
 rm ./bundle.js
 rm ./index.html
 cp ./../index.html ./../bundle.js .
