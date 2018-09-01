@@ -6,8 +6,8 @@ if cp ./dist/index.html ./dist/bundle.js ./.. ; then
 	git commit -m "Updating Online Website"
 	myWebsiteBranch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 	git push origin $myWebsiteBranch
-	printf "Please Run: `git checkout gh-pages` && `sh uW2.sh`\n"
+	printf "Please Run: 'git checkout gh-pages && sh uW2.s'\n"
 else
 	printf "Either you are in the wrong directory, or /dist has been rearranged.\n"
-	printf "Please run `sh uW.sh` in the correct directory."
+	printf "Please run 'sh uW.sh' in the correct directory."
 fi
