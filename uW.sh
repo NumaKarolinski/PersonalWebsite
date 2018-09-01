@@ -1,23 +1,13 @@
 #!/bin/bash
-if cp ./dist/index.html ./dist/bundle.js ./uW.sh ./.. ; then
-	printf "Files are copied to Desktop!"
+if cp ./dist/index.html ./dist/bundle.js ./.. ; then
+	printf "Files are copied to Desktop!\n"
 	npm run build
 	git add -A
 	git commit -m "Updating Online Website"
-	git push origin websiteVersion1
-	git checkout gh-pages
-	rm bundle.js
-	rm index.html
-	cp ./../index.html ./../bundle.js ./../uW.sh .
-	git add -A
-	git commit -m "Updating Online Website"
-	git push origin gh-pages
-	git checkout websiteVersion1
-	printf "Your website is updated!\n"
-	printf "You might want to merge the master branch (and fix merge conflicts)."
-	rm ./../bundle.js
-	rm ./../index.html
-	rm ./../uW.sh
+	myWebsiteBranch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+	git push origin $myWebsiteBranch
+	printf "Please Run: `git checkout gh-pages` && `sh uW2.sh`\n"
 else
-	printf "Either you are in the wrong directory, or /dist has been rearranged."
+	printf "Either you are in the wrong directory, or /dist has been rearranged.\n"
+	printf "Please run `sh uW.sh` in the correct directory."
 fi
