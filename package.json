@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "set-dev-server": "webpack-dev-server --mode development",
-    "start": "npm run build && npm run set-dev-server",
+    "start": "npm run build && sed -i.bak '/bundle/d' './dist/index.html' && npm run set-dev-server",
     "deploy": "gh-pages -d dist",
     "publish-demo": "npm run build && npm run deploy"
   },
