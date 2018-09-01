@@ -12,8 +12,8 @@ if cp ./dist/index.html ./dist/bundle.js ./uW.sh ./.. ; then
 	git add -A
 	git commit -m "Updating Online Website"
 	git push origin gh-pages
-	git checkout websiteVersion1
-	printf "Your website is updated!\n"
+	git checkout $(git branch | sed -n -e 's/^\* \(.*|\)/\1/p')
+	printf "Your website should is updated if there were no errors!\n"
 	printf "You might want to merge the master branch (and fix merge conflicts)."
 	rm ./../bundle.js
 	rm ./../index.html
