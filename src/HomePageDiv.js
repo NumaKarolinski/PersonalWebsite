@@ -401,7 +401,7 @@ const backgroundToGray = (props) => keyframes`
         background: radial-gradient(ellipse at ${props.xLeftPercent + '%'} ${props.yLeftPercent + '%'}, rgba(${props.leftR + props.leftRStep * 99}, ${props.leftG + props.leftGStep * 99}, ${props.leftB + props.leftBStep * 99}, ${0.5 + 0.002 * 99}), transparent),
             		radial-gradient(ellipse at ${props.xRightPercent + '%'} ${props.yRightPercent + '%'}, rgba(${props.rightR + props.rightRStep * 99}, ${props.rightG + props.rightGStep * 99}, ${props.rightB + props.rightBStep * 99}, ${0.5 + 0.002 * 99}), transparent);
 	}
-	100{
+	100%{
 		background: radial-gradient(ellipse at ${props.xLeftPercent + '%'} ${props.yLeftPercent + '%'}, rgba(${props.leftR + props.leftRStep * 100}, ${props.leftG + props.leftGStep * 100}, ${props.leftB + props.leftBStep * 100}, ${0.5 + 0.002 * 100}), transparent),
             		radial-gradient(ellipse at ${props.xRightPercent + '%'} ${props.yRightPercent + '%'}, rgba(${props.rightR + props.rightRStep * 100}, ${props.rightG + props.rightGStep * 100}, ${props.rightB + props.rightBStep * 100}, ${0.5 + 0.002 * 100}), transparent);
 	}
