@@ -7,7 +7,7 @@ fi
 npm run build
 git add -A
 git commit -m "Updating Online Website"
-git push origin websiteVersion1
+git push origin websiteVersion1.2
 git checkout gh-pages
 rm bundle.js
 rm index.html
@@ -15,7 +15,7 @@ cp ./../index.html ./../bundle.js ./../uW.sh .
 git add -A
 git commit -m "Updating Online Website"
 git push origin gh-pages
-git checkout websiteVersion1
+git checkout websiteVersion1.2
 printf "Your website is updated!\n"
 printf "You might want to merge the master branch (and fix merge conflicts)."
 rm ./../bundle.js
