@@ -8,12 +8,10 @@ npm run build
 commitString=''
 while [ -z "$commitString" ]
 do
-	echo $commitString
 	read -p 'Comment for commit to websiteVersion1.2: ' commitString
-	echo $commitString
 done
 git add -A
-git commit -m $commitString
+git commit -m "$commitString"
 git push origin websiteVersion1.2
 git checkout gh-pages
 rm bundle.js

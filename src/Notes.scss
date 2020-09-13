@@ -1,14 +1,42 @@
 .allPdfDivs{
+    opacity: 0;
 	order: 1;
 	display: inline-flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	position: relative;
 	padding: 15px;
+    animation: fadeInLeft 1s ease-in-out 0.25s 1 forwards;
+    
+    &.buttonClicked{
+        animation: fadeOutLeft 1s ease-in-out 0s 1 forwards;
+    }
+}
+
+@keyframes fadeInLeft{
+	0%{
+		opacity: 0;
+		transform: translateX(100vw);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0vw);
+	}
+}
+
+@keyframes fadeOutLeft{
+	0%{
+		opacity: 1;
+        transform: translateX(0vw);
+	}
+	100%{
+		opacity: 0;
+        transform: translateX(-100vw);
+	}
 }
 
 .aPdfDiv{
-	opacity: 0;
+	opacity: 1;
 	height: 70px;
 	width: 150px;
 	border: 2px solid #707090;
@@ -20,21 +48,9 @@
 	display: table;
 	text-decoration: none;
 	cursor: pointer;
-	animation: slideLeft 1s ease-in-out 0.25s 1 forwards;
 
 	&.clicked{
 		background: rgba(40, 40, 40, 0.2);
-	}
-}
-
-@keyframes slideLeft{
-	0%{
-		opacity: 0;
-		transform: translateX(100vw);
-	}
-	100%{
-		opacity: 1;
-		transform: translateX(0vw);
 	}
 }
 
@@ -47,30 +63,5 @@
 
 	&.clicked{
 		color: rgb(75, 75, 125);
-	}
-}
-
-/*#projectsBtnNotes.projectsClicked{
-	animation: fadeOut 1s cubic-bezier(0.5, 0, 0, 1) forwards 0s 1;
-}
-
-#projectsBtnNotes.aboutMeClicked{
-	animation: ;
-}
-
-#aboutMeBtnNotes.projectsClicked{
-	animation: ;
-}
-
-#aboutMeBtnNotes.aboutMeClicked{
-	animation: fadeOut 1s cubic-bezier(0.5, 0, 0, 1) forwards 0s 1;
-}*/
-
-@keyframes fadeOut{
-	0%{
-		opacity: 1;
-	}
-	100%{
-		opacity: 0;
 	}
 }

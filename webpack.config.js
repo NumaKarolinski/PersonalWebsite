@@ -1,6 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
-const bundlePath = path.resolve(__dirname, "dist");
+const bundlePath = path.resolve(__dirname, "dist/");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: path.join(__dirname, "dist/index.html"),
@@ -42,9 +42,9 @@ module.exports = {
     filename: "bundle.js"
   },
   devServer: {
-    contentBase: path.join(__dirname,'dist'),
+    contentBase: path.join(__dirname,'dist/'),
     port: 3000,
-    publicPath: "http://localhost:3000/dist"
+    publicPath: "http://localhost:3000/"
   },
   plugins: [ new webpack.HotModuleReplacementPlugin(), htmlWebpackPlugin ]
 };
