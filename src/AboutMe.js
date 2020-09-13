@@ -30,9 +30,7 @@ export default class AboutMe extends Component{
 
 					<div class="aboutMeBody">
 
-                        <div class="selfPicture">
-                            
-                        </div>
+                        <div class="selfPicture"></div>
 
                         <div class="selfDescription">
                             

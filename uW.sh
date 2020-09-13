@@ -22,7 +22,7 @@ git commit -m "Updating Online Website"
 git push origin gh-pages
 git checkout websiteVersion1.2
 printf "Your website is updated!\n"
-printf "You might want to merge the master branch (and fix merge conflicts)."
+printf "You might want to merge the master branch (and fix merge conflicts).\n"
 rm ./../bundle.js
 rm ./../index.html
 rm ./../uW.sh
