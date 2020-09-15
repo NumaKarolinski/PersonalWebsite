@@ -2,7 +2,7 @@
     opacity: 0;
 	order: 1;
 	display: inline-flex;
-	flex-flow: row wrap;
+	flex-flow: column wrap;
 	justify-content: center;
 	position: relative;
 	padding: 15px;
@@ -35,23 +35,56 @@
 	}
 }
 
+.upperAboutMeBody{
+    order: 0;
+    position: relative;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.lowerAboutMeBody{
+    order: 1;
+    position: relative;
+}
+
 .selfPicture{
     order: 0;
     position: relative;
+    width: 300px;
+    height: 381px;
     background-image: url("https://cdn.rawgit.com/NumaKarolinski/PersonalWebsite/websiteVersion1.2/src/SourceImages/Digital_Photo_Numa_Karolinski.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 20px;
 }
 
 .selfDescription{
     order: 1;
     position: relative;
-    margin: 20px;
+    display: table;
+    width: 400px;
+    height: 200px;
+    margin: 32.9px 20px 32.9px 20px;
+}
+
+
+#aboutMeDescriptionText{
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6em;
+    color: #503070;
 }
 
 .selfLinks{
-    order: 2;
+    order: 0;
     position: relative;
     margin: 20px;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
 .aboutMeRedirectDiv{
@@ -60,7 +93,7 @@
 	width: 100px;
 	border: 2px solid #707090;
 	border-radius: 20px;
-	margin: 20px;
+	margin: 10px;
 	box-shadow: 2px 2px 15px rgba(150, 150, 150, 0.8);
 	background: rgba(250, 250, 250, 0.3);
 	display: table;
@@ -78,7 +111,7 @@
 	width: 100px;
 	border: 2px solid #707090;
 	border-radius: 20px;
-	margin: 20px;
+	margin: 10px;
 	box-shadow: 2px 2px 15px rgba(150, 150, 150, 0.8);
 	background: rgba(250, 250, 250, 0.3);
 	display: table;
@@ -100,4 +133,16 @@
 	&.clicked{
 		color: rgb(75, 75, 125);
 	}
+}
+
+#linkedInDiv{
+    order: 0;
+}
+
+#githubDiv{
+    order: 1;
+}
+
+#resumeDiv{
+    order: 2;
 }

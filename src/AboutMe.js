@@ -30,18 +30,24 @@ export default class AboutMe extends Component{
 
 					<div class="aboutMeBody">
 
-                        <div class="selfPicture"></div>
-
-                        <div class="selfDescription">
+                        <div class="upperAboutMeBody">
                             
+                            <div class="selfPicture"></div>
+                            <div class="selfDescription">
+                                    <span id = "aboutMeDescriptionText">I am a recent graduate from McGill University with two B.Sc. Degrees in Physics and Computer Science. I am actively pursuing a career in science related fields, within academic or industry. I have two years of experience in astrophysics research and satellite imagery design within the McGill Space Group. I am interested in any opportunities which will allow me to continue to learn and discover.</span>
+                            </div>
+
                         </div>
-
-                        <div class="selfLinks">
+                        
+                        <div class="lowerAboutMeBody">
                             
-                            <AboutMeRedirectDiv id = "linkedInDiv" link = "https://www.linkedin.com/in/numa-karolinski-5a0a861b5/?originalSubdomain=ca" redirectName = "LinkedIn"/>
-                            <AboutMeRedirectDiv id = "githubDiv" link = "https://github.com/NumaKarolinski" redirectName = "GitHub"/>
-                            <AboutMeDownloadDiv id = "resumeDiv" fileName = "Resume_Numa_Karolinski_2020.pdf" downloadName="Resume"/>
-                                
+                            <div class="selfLinks">
+
+                                <AboutMeRedirectDiv id = "linkedInDiv" link = "https://www.linkedin.com/in/numa-karolinski-5a0a861b5/?originalSubdomain=ca" redirectName = "LinkedIn"/>
+                                <AboutMeRedirectDiv id = "githubDiv" link = "https://github.com/NumaKarolinski" redirectName = "GitHub"/>
+                                <AboutMeDownloadDiv id = "resumeDiv" fileName = "Resume_Numa_Karolinski_2020.pdf" downloadName="Resum&eacute;"/>
+
+                            </div>
                         </div>
 					</div>
 				</BodyDiv>
