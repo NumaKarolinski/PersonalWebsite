@@ -1,0 +1,84 @@
+.projectsBody{
+    opacity: 0;
+	order: 1;
+	display: inline-flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	position: relative;
+	padding: 15px;
+    animation: fadeInLeft 1s ease-in-out 0.25s 1 forwards;
+    
+    &.buttonClicked{
+        animation: fadeOutLeft 1s ease-in-out 0s 1 forwards;
+    }
+}
+
+@keyframes fadeInLeft{
+	0%{
+		opacity: 0;
+		transform: translateX(100vw);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0vw);
+	}
+}
+
+@keyframes fadeOutLeft{
+	0%{
+		opacity: 1;
+        transform: translateX(0vw);
+	}
+    100%{
+		opacity: 0;
+        transform: translateX(-100vw);
+	}
+}
+
+.aProjectDiv{
+    margin: 10px auto;
+    padding: 10px;
+    border: 10px solid #806090;
+    display: inline-flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    position: relative;
+}
+
+.projectsDivUpper{
+    order: 0;
+    position: relative;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.projectsDivLower{
+    order: 1;
+    position: relative;
+    margin: 10px;
+}
+
+.projectsDescriptionDiv{
+    order: 1;
+    position: relative;
+    display: table;
+    width: 400px;
+    height: 200px;
+    margin: auto 10px;
+}
+
+.projectsLink{
+    order: 1;
+    font-size: 1.4em;
+    color: #3e199a;
+}
+
+.projectsTextBox{
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6em;
+    color: #543573;
+}

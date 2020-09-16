@@ -28,7 +28,7 @@ export default class AboutMeRedirectDiv extends Component{
 		return(
 
 			<div>
-				<a class = "aboutMeRedirectDiv" href = {this.props.link} onClick = {(e) => this.aButtonDivClick(e)}>
+				<a class = "aboutMeRedirectDiv" href = {this.props.link} target="_blank" onClick = {(e) => this.aButtonDivClick(e)}>
 					<span id = {this.props.redirectName + "AboutMeDiv"} class = "aboutMeTextBox">{this.props.redirectName}</span>
 				</a>
 			</div>			
