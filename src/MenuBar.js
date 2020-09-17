@@ -19,6 +19,7 @@ export default class MenuBar extends Component{
 		$('.bodyHeader').addClass('buttonClicked');
         $('.allPdfDivs').addClass('buttonClicked');
         $('.aboutMeBody').addClass('buttonClicked');
+        $('.projectsBody').addClass('buttonClicked');
 
 		if(divType === "About Me"){
 
