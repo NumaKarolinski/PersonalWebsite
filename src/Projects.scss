@@ -36,13 +36,15 @@
 }
 
 .aProjectDiv{
-    margin: 10px auto;
-    padding: 10px;
+    margin: 5px auto;
+    padding: 7px;
     border: 10px solid #806090;
+    border-radius: 5px;
     display: inline-flex;
     flex-flow: column wrap;
     justify-content: center;
     position: relative;
+    box-shadow: 5px 5px 5px rgba(150, 150, 150, 0.8);
 }
 
 .projectsDivUpper{
