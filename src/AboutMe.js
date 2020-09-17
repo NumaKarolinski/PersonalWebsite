@@ -34,7 +34,7 @@ export default class AboutMe extends Component{
                             
                             <div class="selfPicture"></div>
                             <div class="selfDescription">
-                                    <span id = "aboutMeDescriptionText">I am a recent graduate from McGill University with two B.Sc. Degrees in Physics and Computer Science. I am actively pursuing a career in science related fields, within academic or industry. I have two years of experience in astrophysics research and satellite imagery design within the McGill Space Group. I am interested in any opportunities which will allow me to continue to learn and discover.</span>
+                                    <span id = "aboutMeDescriptionText">I am a recent graduate from McGill University with two B.Sc. Degrees in Physics and Computer Science. I am actively pursuing a career in science related fields, within academic or industry. I have two years of experience in astrophysics research and satellite imagery design within the McGill Space Group. I am interested in any opportunities which will allow me to continue to learn and discover. Contact me at numa.karolinski@mail.mcgill.ca.</span>
                             </div>
 
                         </div>
