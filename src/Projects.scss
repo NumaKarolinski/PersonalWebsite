@@ -5,7 +5,7 @@
 	flex-flow: row wrap;
 	justify-content: center;
 	position: relative;
-	padding: 15px;
+	padding: 15px 15px 0px 15px;
     animation: fadeInLeft 1s ease-in-out 0.25s 1 forwards;
     
     &.buttonClicked{
@@ -40,46 +40,24 @@
     border: 10px solid #806090;
     border-radius: 5px;
     display: inline-flex;
-    flex-flow: column wrap;
-    justify-content: center;
+    flex-flow: row wrap;
+    flex-basis: 0;
+    justify-content: space-evenly;
     position: relative;
     box-shadow: 5px 5px 5px rgba(150, 150, 150, 0.8);
 }
 
-.projectsDivUpper{
-    order: 0;
-    position: relative;
-    display: inline-flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-
-.projectsDivLower{
-    order: 1;
-    position: relative;
-    margin: 10px;
-}
-
-.projectsDescriptionDiv{
-    order: 1;
-    position: relative;
-    display: table;
-    width: 400px;
-    height: 200px;
-    margin: auto 10px;
+.projectsTextBox{
+    display: table-cell;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4em;
+    color: #543573;
 }
 
 .projectsLink{
-    order: 1;
-    font-size: 1.4em;
+    order: 2;
+    font-size: 1.2em;
     color: #3e199a;
-}
-
-.projectsTextBox{
-    display: table-cell;
-    text-align: left;
-    vertical-align: middle;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.6em;
-    color: #543573;
+    margin: 10px;
 }

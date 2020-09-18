@@ -3,7 +3,7 @@ import styled, {keyframes} from 'styled-components';
 const BackgroundDiv = styled.div`
 	height: 100vh;
 	width: 100vw;
-    min-width: 465.94px;
+    min-width: 485px;
 	display: flex;
 	flex-direction: column;
 	position: relative;
