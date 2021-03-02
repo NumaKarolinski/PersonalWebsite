@@ -32,7 +32,7 @@ export default class Projects extends Component{
                             
                         <AProjectDiv fileName = "albedoMapWebsite.png" projectName = "mecha2020" width = {424.4} height = {264} clickText = "Take a look at my stan code!" link = "https://github.com/NumaKarolinski/exoplanet_inverse_problem_stan_toy_model" description = "In the summer of 2020 I worked with Prof. Nicolas Cowan from McGill University. I investigated 3 programs that solve the exoplanet inverse problem. I ended the summer by writing a stan program that solves the inverse problem with a Hamiltonian Monte Carlo simulation." />
 
-			<AProjectDiv filename = "nufavicon.png" projectName = "nuschedule2021" width = {264} height = {264} clickText = "Check out nuschedule!" link = "https://nuschedule.com" description = "We always know what we want to do, but scheduling gets annoying, and strict schedules get monotonous. Define your events, and let my website generate the schedule for you. Include randomization features to make each day unique." />
+			<AProjectDiv fileName = "nufavicon.png" projectName = "nuschedule2021" width = {264} height = {264} clickText = "Check out nuschedule!" link = "https://nuschedule.com" description = "We always know what we want to do, but scheduling gets annoying, and strict schedules get monotonous. Define your events, and let my website generate the schedule for you. Include randomization features to make each day unique." />
 
                     </div>
 				</BodyDiv>
