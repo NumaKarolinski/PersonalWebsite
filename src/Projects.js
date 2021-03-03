@@ -34,6 +34,8 @@ export default class Projects extends Component{
 
 			<AProjectDiv fileName = "nufavicon.png" projectName = "nuschedule2021" width = {264} height = {264} clickText = "Check out nuschedule!" link = "https://nuschedule.com" description = "We always know what we want to do, but scheduling gets annoying, and strict schedules get monotonous. Define your events, and let my website generate the schedule for you. Include randomization features to make each day unique." />
 
+			#Adding a comment so that maybe the bundle works properly.
+
                     </div>
 				</BodyDiv>
 			</BackgroundDiv>
