@@ -1,9 +1,9 @@
 #!/bin/bash
 npm run build
 if cp ./dist/index.html ./dist/bundle.js ./uW.sh ./.. ; then
-	printf "Files are copied to Desktop!"
+	printf "Files are copied to Desktop!\n"
 else
-	printf "Either you are in the wrong directory, or /dist has been rearranged."
+	printf "Either you are in the wrong directory, or /dist has been rearranged.\n"
 fi
 commitString=''
 while [ -z "$commitString" ]
