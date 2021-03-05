@@ -15,8 +15,11 @@ git commit -m "$commitString"
 git push origin websiteVersion1.2
 git checkout gh-pages
 rm bundle.js
+rm ./dist/bundle.js
 rm index.html
+rm ./dist/index.html
 cp ./../index.html ./../bundle.js ./../uW.sh .
+cp ./../index.html ./../bundle.js ./dist
 git add -A
 git commit -m "Updating Online Website"
 git push origin gh-pages
