@@ -1,0 +1,13 @@
+Make sure that all the following files are in the root directory:
+.babelrc
+package-lock.json
+package.json
+uW.sh
+webpack.config.js
+
+Make sure that all of the following files are in ./dist but not in ./:
+bundle.js
+index.html
+
+Make sure that all of the dev-dependencies in package.json are correct by using the command (for example):
+npm install --save-dev babel-cli@6.26.0
