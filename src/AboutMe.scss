@@ -35,12 +35,12 @@
 	}
 }
 
-.upperAboutMeBody{
-    order: 0;
-    position: relative;
-    display: inline-flex;
-    flex-flow: row wrap;
+.upperAboutMeBody {
+    display: grid;
+    grid-template-columns: auto auto; /* Two columns: one for picture, one for description */
     justify-content: center;
+    gap: 20px; /* Space between columns */
+    max-width: 800px; /* Optional: controls width of entire container */
 }
 
 .lowerAboutMeBody{
@@ -48,22 +48,29 @@
     position: relative;
 }
 
-.selfPicture{
-    order: 0;
+.selfPicture {
+    grid-column: 1; /* Picture stays in first column */
+    grid-row: 1;
     position: relative;
     height: 414.4px;
     width: 317px;
-    background-image: url("https://cdn.rawgit.com/NumaKarolinski/PersonalWebsite/websiteVersion1.2/src/SourceImages/good_numa_photo.png");
+    background-image: url("https://cdn.rawgit.com/NumaKarolinski/PersonalWebsite/websiteVersion1.2/src/SourceImages/good_numa_photo_2.png");
     background-repeat: no-repeat;
     background-size: cover;
     margin: 20px;
 }
 
-.selfDescription{
-    order: 1;
-    position: relative;
-    width: 390px;
-    margin: auto 20px;
+.selfDescription {
+    grid-column: 2; /* Initially stays in the second column */
+    grid-row: 1;
+
+    /* Full width on new row when wrapping */
+    @media (max-width: 600px) { /* Adjust this max-width based on when you want wrap to happen */
+        grid-column: 1 / span 2;
+        margin: 20px auto;
+    }
+    
+    width: 100%; /* Takes full width when on the second row */
 }
 
 
