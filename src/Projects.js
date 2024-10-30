@@ -32,7 +32,9 @@ export default class Projects extends Component{
                             
                         <AProjectDiv fileName = "albedoMapWebsite.png" projectName = "mecha2020" width = {424.4} height = {264} clickText = "Take a look at my stan code!" link = "https://github.com/NumaKarolinski/exoplanet_inverse_problem_stan_toy_model" description = "In the summer of 2020 I worked with Prof. Nicolas Cowan from McGill University. I investigated 3 programs that solve the exoplanet inverse problem. I ended the summer by writing a stan program that solves the inverse problem with a Hamiltonian Monte Carlo simulation." />
 
-			<AProjectDiv fileName = "nufavicon.png" projectName = "nuschedule2021" width = {264} height = {264} clickText = "Check out nuschedule!" link = "https://nuschedule.com" description = "We all know what we want to do, but scheduling gets annoying, and if your schedule is too strict, your time feels monotonous. This schedule adds randomization features to make each day unique." />.
+						<AProjectDiv fileName = "nufavicon.png" projectName = "nuschedule2021" width = {264} height = {264} clickText = "Check out nuschedule!" link = "https://nuschedule.com" description = "We all know what we want to do, but scheduling gets annoying, and if your schedule is too strict, your time feels monotonous. This schedule adds randomization features to make each day unique." />
+
+						<AProjectDiv fileName = "KT_with_equations.png" projectName = "bishops2024" width = {350} height = {261} clickText = "Read My Publication For More Information!" link = "https://arxiv.org/abs/2401.04877" description = "My MSc included work on the first-order thermodynamics of scalar-tensor gravity. With Dr. Valerio Faraoni's help, I tested an exact geometry sourced by a conformally coupled scalar field, showing a richer range of thermal behaviours of modified gravity than previously thought." />
 
                     </div>
 				</BodyDiv>
