@@ -1,7 +1,7 @@
 .aboutMeBody{
     opacity: 0;
 	order: 1;
-	display: inline-flex;
+	display: flex;
 	flex-flow: column wrap;
 	justify-content: center;
 	position: relative;
@@ -35,12 +35,13 @@
 	}
 }
 
-.upperAboutMeBody {
-    display: grid;
-    grid-template-columns: auto auto; /* Two columns: one for picture, one for description */
+.upperAboutMeBody{
+    order: 0;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: center;
-    gap: 20px; /* Space between columns */
-    max-width: 800px; /* Optional: controls width of entire container */
+	align-items: center;
 }
 
 .lowerAboutMeBody{
@@ -48,36 +49,35 @@
     position: relative;
 }
 
-.selfPicture {
-    grid-column: 1; /* Picture stays in first column */
-    grid-row: 1;
+.selfPicture{
+    order: 0;
     position: relative;
-    height: 414.4px;
-    width: 317px;
+    height: 415px;
+    width: 355px;
     background-image: url("https://cdn.rawgit.com/NumaKarolinski/PersonalWebsite/websiteVersion1.2/src/SourceImages/good_numa_photo_2.png");
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 20px;
+    margin: 20px; // Adjust margin as needed
 }
 
-.selfDescription {
-    grid-column: 2; /* Initially stays in the second column */
-    grid-row: 1;
+.selfDescription{
+    order: 1;
+    position: relative;
+	flex: 1;
+	max-width: 844px;
+	min-width: 457px;
+    margin: 20px; // Adjust margin as needed
 
-    /* Full width on new row when wrapping */
-    @media (max-width: 600px) { /* Adjust this max-width based on when you want wrap to happen */
-        grid-column: 1 / span 2;
-        margin: 20px auto;
+    // This media query will move .selfDescription underneath .selfPicture on smaller screens
+    @media (max-width: 457px) {
+        width: 100%; // Takes full width under 457px
+        margin-top: 20px; // Adds spacing above when wrapped
     }
-    
-    width: 100%; /* Takes full width when on the second row */
 }
-
 
 #aboutMeDescriptionText{
-    display: table-cell;
+    display: block;
     text-align: justify;
-    vertical-align: middle;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.6em;
     color: #503070;
@@ -87,7 +87,7 @@
     order: 0;
     position: relative;
     margin: 20px;
-    display: inline-flex;
+    display: flex;
     flex-flow: row wrap;
     justify-content: center;
 }

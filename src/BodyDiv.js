@@ -10,7 +10,7 @@ const BodyDiv = styled.div`
 	min-width: 485px;
 	text-align: center;
 	overflow-y: auto;
-	display: inline-flex;
+	display: flex;
 	flex-direction: column;
 	overflow-x: hidden;
 `;
