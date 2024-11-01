@@ -22,8 +22,6 @@ export default class HomePage extends Component{
 	}
 
 	componentDidMount(){
-
-		console.log(this.state.inWelcomeAnimation);
 		
 		if(this.state.inWelcomeAnimation === true){
 
