@@ -45,7 +45,7 @@ export default class AboutMe extends Component{
 
                                 <AboutMeRedirectDiv id = "linkedInDiv" link = "https://www.linkedin.com/in/numa-karolinski-5a0a861b5/?originalSubdomain=ca" redirectName = "LinkedIn"/>
                                 <AboutMeRedirectDiv id = "githubDiv" link = "https://github.com/NumaKarolinski" redirectName = "GitHub"/>
-                                <AboutMeDownloadDiv id = "resumeDiv" fileName = "Resume_Numa_Karolinski_2021.pdf" downloadName="Resum&eacute;"/>
+                                <AboutMeDownloadDiv id = "resumeDiv" fileName = "Resume_Numa_Karolinski_2024.pdf" downloadName="Resum&eacute;"/>
 
                             </div>
                         </div>
