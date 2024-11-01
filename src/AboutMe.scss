@@ -64,13 +64,13 @@
     order: 1;
     position: relative;
 	flex: 1;
-	max-width: 844px;
-	min-width: 457px;
+	max-width: 849px;
+	min-width: 463px;
     margin: 20px; // Adjust margin as needed
 
     // This media query will move .selfDescription underneath .selfPicture on smaller screens
-    @media (max-width: 457px) {
-        width: 100%; // Takes full width under 457px
+    @media (max-width: 463px) {
+        width: 100%; // Takes full width under 463px
         margin-top: 20px; // Adds spacing above when wrapped
     }
 }
